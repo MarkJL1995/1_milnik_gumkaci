@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc-web.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc-web_main.iml" group="jdbc-web" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc-web_test.iml" group="jdbc-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/formular.iml" filepath="$PROJECT_DIR$/.idea/modules/formular.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/formular_main.iml" filepath="$PROJECT_DIR$/.idea/modules/formular_main.iml" group="formular" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/formular_test.iml" filepath="$PROJECT_DIR$/.idea/modules/formular_test.iml" group="formular" />
     </modules>
   </component>
 </project>
