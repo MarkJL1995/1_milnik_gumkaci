@@ -23,11 +23,10 @@ public class ConnectionManager {
 		logger.info( "MySQL JDBC Driver Registered!" );
 		Connection connection = null;
 		try {
-			connection = DriverManager.getConnection( "jdbc:mysql://35.198.174.32:3306/tajj", "tajj", "tajj" );
+			connection = DriverManager.getConnection( "jdbc:mysql://35.198.174.32:3306/JALC", "jalc", "jalc" );
 		} catch (SQLException e) {
 			logger.error( "Connection Failed! Check output console", e );
 		}
 		return connection;
 	}
 }
-

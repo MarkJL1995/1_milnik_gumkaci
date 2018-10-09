@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/formular.iml" filepath="$PROJECT_DIR$/.idea/modules/formular.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/formular_main.iml" filepath="$PROJECT_DIR$/.idea/modules/formular_main.iml" group="formular" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/formular_test.iml" filepath="$PROJECT_DIR$/.idea/modules/formular_test.iml" group="formular" />
+      <module fileurl="file://$USER_HOME$/Desktop/javax.jar/javax.jar.iml" filepath="$USER_HOME$/Desktop/javax.jar/javax.jar.iml" group="formular" />
     </modules>
   </component>
 </project>

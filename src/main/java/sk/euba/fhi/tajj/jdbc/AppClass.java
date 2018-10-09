@@ -1,9 +1,9 @@
 package sk.euba.fhi.tajj.jdbc;
 
 import ro.pippo.core.Pippo;
-import sk.euba.fhi.tajj.jdbc.dao.BookDao;
+import sk.euba.fhi.tajj.jdbc.dao.ClenDao;
 import sk.euba.fhi.tajj.jdbc.dao.DaoFactory;
-import sk.euba.fhi.tajj.jdbc.domain.Book;
+import sk.euba.fhi.tajj.jdbc.domain.Clen;
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,31 +17,51 @@ public class AppClass {
 	public static void main(String[] args) {
 		Pippo pippo = new Pippo();
 
-		pippo.GET( "/", routeContext -> {
+			pippo.GET( "/", routeContext -> {
 			Map<String, Object> model = getModelMap();
-			routeContext.render( "books", model );
+			routeContext.render( "menu", model );
 		} );
 
-		pippo.GET( "/add", routeContext -> {
-			routeContext.render( "addbook" );
+        pippo.GET( "/addclen", routeContext -> {
+            routeContext.render( "addclen" );
+        } );
+
+        pippo.GET( "/clen", routeContext -> {
+            Map<String, Object> model = getModelMap1();
+            routeContext.render( "clenovia", model );
+        } );
+
+		pippo.POST( "/addclen", routeContext -> {
+			ClenDao clenDao = DaoFactory.createDao();
+			String meno_clena = routeContext.getParameter( "meno_clena" ).toString();
+			Integer cislo_clena = routeContext.getParameter("cislo_clena").toInt();
+			String ulica_clena = routeContext.getParameter( "ulica_clena" ).toString();
+			String mesto_clena = routeContext.getParameter( "mesto_clena" ).toString();
+			Integer psc_clena = routeContext.getParameter("psc_clena").toInt();
+			Integer clensky_poplatok= routeContext.getParameter("clensky_poplatok").toInt();
+			Clen clen = new Clen( meno_clena,cislo_clena,ulica_clena, mesto_clena, psc_clena, clensky_poplatok );
+
+			clenDao.addClen( clen );
+			routeContext.redirect( "/clen" );
 		} );
 
-		pippo.POST( "/add", routeContext -> {
-			BookDao bookDao = DaoFactory.createDao();
-			String name = routeContext.getParameter( "bookname" ).toString();
-			Book book = new Book( name, 0 );//FIXME: Rok nacitat z formulara
-
-			bookDao.addBook( book );
-			routeContext.redirect( "/" );
-		} );
 		pippo.start();
 	}
 
 	private static Map<String, Object> getModelMap() {
-		BookDao bookDao = DaoFactory.createDao();
-		List<Book> books = bookDao.allBooks();
+		ClenDao clenDao = DaoFactory.createDao();
+		List<Clen> menu = clenDao.allClenovia();
 		Map<String, Object> model = new HashMap<>();
-		model.put( "books", books );
+		model.put( "menu", menu );
 		return model;
 	}
+
+    private static Map<String, Object> getModelMap1() {
+        ClenDao clenDao = DaoFactory.createDao();
+        List<Clen> clenovia = clenDao.allClenovia();
+        Map<String, Object> model = new HashMap<>();
+        model.put( "clenovia", clenovia );
+        return model;
+    }
+
 }
