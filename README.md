@@ -1,31 +1,22 @@
-# Anonymní čokoholici - Gumkáči - Aplikácia
+# Pridanie členov Anonymních čokoholikov cez formulár
 
 ### Webová aplikácia - úvodná obrazovka
 + [http://localhost:8338/](http://localhost:8338/) - úvodné menu
+![menu](https://user-images.githubusercontent.com/36454856/46702090-249ca480-cc22-11e8-8f9a-4f0b3ee30f98.JPG)
 
-### Webová aplikácia - obrazovka na pridanie člena z DB
+### Webová aplikácia - obrazovka na pridanie záznamu do DB
++ [http://localhost:8338/clen](http://localhost:8338/clen) - zoznam členov
+![pridat clena](https://user-images.githubusercontent.com/36454856/46702091-249ca480-cc22-11e8-98ec-9e96cae9e3ca.JPG)
+
+### Webová aplikácia - obrazovka na zobrazenie záznamov z DB
 + [http://localhost:8338/addclen](http://localhost:8338/addclen) - pridanie členov
-
-### Webová aplikácia - obrazovka na zobrazenie členov do DB
-+ [http://localhost:8338/clen](http://localhost:8338/clen) - zobrazenie členov
-
-### Webová aplikácia - obrazovka na zobrazenie poskytovateľov z DB
-+ [http://localhost:8338/poskytovatelia](http://localhost:8338/poskytovatelia) - zobrazenie poskytovateľov
-
-### Webová aplikácia - obrazovka na zobrazenie služieb z DB
-+ [http://localhost:8338/sluzby](http://localhost:8338/sluzby) - zobrazenie služieb
-
-### Webová aplikácia - obrazovka na zobrazenie zoznamu úkonov z DB
-+ [http://localhost:8338/zoznam_ukonov](http://localhost:8338/zoznam_ukonov) - zobrazenie zoznamu úkonov
-
-### Webová aplikácia - obrazovka na pridanie poskytnutej služby z DB
-+ [http://localhost:8338/addvyuzitie_sluzibe](http://localhost:8338/addvyuzitie_sluzieb) - pridanie poskytnutej služby
-
-### Webová aplikácia - obrazovka na zobrazenie poskytnutých služieb z DB
-+ [http://localhost:8338/vyuzitie_sluzieb](http://localhost:8338/vyuzitie_sluzieb) - zobrazenie poskytnutých služieb
+![zoznam](https://user-images.githubusercontent.com/36454856/46702088-24040e00-cc22-11e8-9004-96e7cb96e04a.JPG)
 
 
 
 
 
 
+
+
+# cokoholici-gumkaci

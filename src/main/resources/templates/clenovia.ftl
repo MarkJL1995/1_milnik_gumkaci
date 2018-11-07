@@ -2,84 +2,29 @@
 <head>
     <title>Členovia - Anonymní Čokoholici - Gumkáči</title>
 </head>
-<style>/*CSS document*/
-h1
-{
-    color: #379683;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-html
-{
-    background-image: linear-gradient(#8EE4AF, #05386B);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-
-}
-th {
-    background-color: #05386B;
-    color: #EDF5E1;
-}
-tr{
-    background-color:white;
-}
-tr:nth-child(even) {background-color: #c7eae6;}
-
-.greenbutton
-{
-    background-image: linear-gradient(#05386B, #379683);
-    background-color: #05386B;
-    border-radius: 10px;
-    cursor: pointer;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: #EDF5E1;
-    font-weight: bold;
-    padding: 7px;
-    box-shadow: 6px 6px 4px black;
-    position: center;
-}
-.greenbutton:hover
-{
-    background-image: linear-gradient(#05386B, #379683);
-    background-color: #05386B;
-    color: #EDF5E1;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-style: italic;
-    position: center;
-}
-
-.greenbutton:active {
-    background-color: #379683;
-    box-shadow: 0 4px #666;
-    transform: translateY(3px);
-    position: center;
-}
-</style>
-
+<script>
+    function openWin1()
+    {
+        window.location.href="/";
+    }
+</script>
 <body>
 <h1>Členovia - Anonymní Čokoholici - Gumkáči</h1>
+<p>&emsp;&emsp;&thinsp;----------------------------------------------------</p>
+<ul>
+    <#list clenovia as clen>
+            <li><b>Poradové číslo:</b> &emsp;&emsp;&thinsp;${clen_index + 1}.
+            <br><b>Meno: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b>${clen.meno_clena}
+            <br><b>Číslo: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b> ${clen.cislo_clena}
+            <br><b>Ulica: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b>  ${clen.ulica_clena}
+            <br><b>PSČ:  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</b>${clen.psc_clena}
+            <br><b>Mesto:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b>${clen.mesto_clena}
+            <br><b>Členský poplatok:&emsp;</b>${clen.clensky_poplatok} €
+            <br> ----------------------------------------------------<br>
+        </li>
+    </#list>
+</ul>
 
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Číslo</th>
-        <th>Meno</th>
-        <th>Ulica</th>
-        <th>PSČ</th>
-        <th>Mesto</th>
-    </tr>
-        <#list clenovia as clen>
-            <tr>
-                <td>${clen_index + 1}.</td>
-                <td>${clen.cislo_clena}</td>
-                <td>${clen.meno_clena}</td>
-                <td>${clen.ulica_clena}</td>
-                <td>${clen.psc_clena}</td>
-                <td>${clen.mesto_clena}</td>
-            </tr>
-        </#list>
-</table>
-
-<br><br><input type="button" class="greenbutton" value="<< Návrat" onclick="window.location.href='/'">
+<input type="button" value="<< Návrat" onclick="openWin1()">
 </body>
 </html>
