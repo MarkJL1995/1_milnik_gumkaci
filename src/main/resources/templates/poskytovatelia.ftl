@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Pridať člena</title>
+    <title>Poskytovatelia - Anonymní Čokoholici - Gumkáči</title>
 </head>
 <style>/*CSS document*/
 h1
@@ -16,6 +16,14 @@ html
     background-position: center;
 
 }
+th {
+    background-color: #05386B;
+    color: #EDF5E1;
+}
+tr{
+    background-color:white;
+}
+tr:nth-child(even) {background-color: #c7eae6;}
 
 .greenbutton
 {
@@ -49,22 +57,29 @@ html
 </style>
 
 <body>
-<h1>Pridať člena</h1>
+<h1>Poskytovatelia - Anonymní Čokoholici - Gumkáči</h1>
 
-<ul>
-<form action="/addclen" method="post">
-    <font color="red"><b>${chyba}</b></font>
-    <br><br><b>Číslo: </b>&thinsp;&emsp;&emsp;&emsp;&emsp;&emsp; <input name="cislo_clena" value=""><font color="red"> *</font>
-    <br><br><b> Meno: </b>&emsp;&emsp;&emsp;&emsp;&emsp; <input name="meno_clena" value=""><font color="red"> *</font>
-    <br><br><b>Ulica: </b>&thinsp;&emsp;&emsp;&emsp;&emsp;&emsp;  <input name="ulica_clena" value=""><font color="red"> *</font>
-    <br><br><b>PSČ:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input name="psc_clena" value=""><font color="red"> *</font>
-    <br><br><b>Mesto:</b>&emsp;&emsp;&emsp;&emsp;&emsp; <input name="mesto_clena" value=""><font color="red"> *</font>
-    <br><br><input type="submit" class="greenbutton" name="Potvrdiť" value="Potvrdiť">
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Číslo</th>
+        <th>Meno</th>
+        <th>Ulica</th>
+        <th>PSČ</th>
+        <th>Mesto</th>
+    </tr>
+         <#list poskytovatelia as poskytovatel>
+            <tr>
+                <td>${poskytovatel_index + 1}.</td>
+                <td>${poskytovatel.cislo_poskytovatela}</td>
+                <td>${poskytovatel.meno_poskytovatela}</td>
+                <td>${poskytovatel.ulica_poskytovatela}</td>
+                <td>${poskytovatel.psc_poskytovatela}</td>
+                <td>${poskytovatel.mesto_poskytovatela}</td>
+            </tr>
+        </#list>
+</table>
 
-</form>
-</ul>
-
-    <br><br><input type="button" class="greenbutton" value="<< Návrat" onclick="window.location.href='/'">
-
+<br><br><input type="button" class="greenbutton" value="<< Návrat" onclick="window.location.href='/'">
 </body>
 </html>
